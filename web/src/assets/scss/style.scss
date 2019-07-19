@@ -20,6 +20,9 @@ body {
 a {
   color: #999;
 }
+p {
+  line-height: 1.5em;
+}
 
 // colors
 
@@ -44,6 +47,13 @@ a {
   .fs-#{$sizeKey} {
     font-size: $size * $base-font-size;
   }
+}
+// text overflow
+.text-ellipsis {
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; //不要换行
 }
 //widht,height
 .w-100 {
@@ -164,5 +174,12 @@ a {
     width: 0.7692rem;
     height: 0.7692rem;
     background-position: 38.577% 52.076%;
+  }
+}
+
+// borders
+@each $dir in (top, right, bottom, left) {
+  .border-#{$dir} {
+    border-#{$dir}: 1px solid $border-color;
   }
 }

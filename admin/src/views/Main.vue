@@ -67,7 +67,7 @@
         <span>王小虎</span>
       </el-header>
 
-      <router-view></router-view>
+      <router-view :key="$router.path"></router-view>
     </el-container>
   </el-container>
 </template>
